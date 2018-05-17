@@ -37,8 +37,8 @@ CMD \
     echo Starting DHCP+TFTP server...&&\
     dnsmasq --interface=eth1 \
     	    --dhcp-range=10.19.5.100,10.19.5.200,255.255.255.0,1h \
-	    --dhcp-boot=pxelinux.0,pxeserver,10.42.42.4 \
-	    --pxe-service=x86PC,"Install Linux",pxelinux \
+	    --dhcp-boot=pxelinux.0,pxeserver,10.19.5.23 \
+	    --pxe-service=x86PC,"Install Linux $DIST",pxelinux \
 	    --enable-tftp --tftp-root=/tftp/ --no-daemon
 # Let's be honest: I don't know if the --pxe-service option is necessary.
 # The iPXE loader in QEMU boots without it.  But I know how some PXE ROMs
