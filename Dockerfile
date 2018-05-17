@@ -4,7 +4,7 @@ ENV DIST xenial
 ENV MIRROR ftp://ftp.ubuntu.com
 
 RUN apt-get -q update
-RUN apt-get -qy install dnsmasq wget iptables nginx 
+RUN apt-get -qy install dnsmasq wget nginx 
 #apt-cacher
 #ADD apt-cacher.conf /etc/apt-cacher/apt-cacher.conf
 #ADD apt-cacher /etc/default/apt-cacher 
